@@ -1,0 +1,29 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn watch:all",
+    "postinstall": "lerna run declaration",
+    "add:pilet": "pilet new app-shell --target packages/${name:-x}-pilet",
+    "upgrade:pilet": "pilet upgrade --target packages/${name:-x}-pilet",
+    "watch:all": "pilet debug 'packages/*-pilet/src/index.tsx'",
+    "watch:piral": "piral debug packages/app-shell/src/index.html",
+    "watch:pilet": "pilet debug packages/${name:-x}-pilet/src/index.tsx",
+    "build:piral": "piral build packages/app-shell/src/index.html",
+    "build:pilet": "pilet build packages/${name:-x}-pilet/src/index.tsx"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "@types/react-router": "^5",
+    "@types/react-router-dom": "^5",
+    "@types/node": "^12",
+    "lerna": "^3.13.0",
+    "piral-cli": "0.14.0",
+    "piral-cli-webpack5": "0.14.0",
+    "typescript": "latest"
+  }
+}
