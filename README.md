@@ -6,6 +6,8 @@
 
 :zap: Shows how dependencies between pilets might be shared via Webpack Module Federation.
 
+You can visit this demo at [webpack-module-federation.samples.piral.cloud/](https://webpack-module-federation.samples.piral.cloud/).
+
 ## Getting Started
 
 Install the dependencies:
